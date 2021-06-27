@@ -1,0 +1,16 @@
+{% extends 'accounts/main.html' %} {% load static %} {% block content %}
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card card-body">
+      <form action="" method="POST">
+        {% csrf_token %} {{form}}
+        <!-- views.py ma createOrder vanni function ma context ma jun name gareko key(i.e yaha 'form') pass gareko cha tei nai huncha yo dtl tag vitra.-->
+
+        <input type="submit" name="Submit" />
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

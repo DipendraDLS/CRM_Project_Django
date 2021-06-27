@@ -1,0 +1,26 @@
+{%  extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="card card-body">
+
+			<form action="" method="POST">
+				{% csrf_token %}
+				{{ form.management_form }} <!--Individually form field harulai save garna ko lagi vanera define garauncha -->
+				{% for field in form %} <!--Individually yeuta yeuta garera form ko filed harulai display garayeko ho-->
+					{{field}}
+					<hr>
+				{% endfor %}
+				
+				<input type="submit" name="Submit">
+			</form>
+
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
